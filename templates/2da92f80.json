@@ -1,0 +1,47 @@
+{
+  "id": "2da92f80",
+  "name": "test1",
+  "canvas_width": 1080,
+  "canvas_height": 1080,
+  "elements": [
+    {
+      "id": "el_mn1xdy8g",
+      "width": 200,
+      "height": 100,
+      "region": {
+        "x_min": 557,
+        "y_min": 959,
+        "x_max": 1078,
+        "y_max": 1076
+      },
+      "color": "#c7b955",
+      "label": "Logo"
+    },
+    {
+      "id": "el_mn1xfw3n",
+      "width": 800,
+      "height": 800,
+      "region": {
+        "x_min": 0,
+        "y_min": 155,
+        "x_max": 1077,
+        "y_max": 964
+      },
+      "color": "#f23448",
+      "label": "New Element"
+    },
+    {
+      "id": "el_mn1xhhgd",
+      "width": 800,
+      "height": 100,
+      "region": {
+        "x_min": 5,
+        "y_min": 2,
+        "x_max": 1069,
+        "y_max": 137
+      },
+      "color": "#77a29d",
+      "label": "New Element"
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #1a1a2e;
+  color: #e0e0e0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: #16213e;
+  border-bottom: 1px solid #333;
+}
+
+.toolbar h1 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e94560;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.template-name {
+  background: #0f3460;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+}
+
+button {
+  padding: 6px 14px;
+  border: 1px solid #444;
+  background: #0f3460;
+  color: #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+button:hover {
+  background: #1a4a7a;
+}
+
+button.primary {
+  background: #e94560;
+  border-color: #e94560;
+  color: #fff;
+  font-weight: 600;
+}
+
+button.primary:hover {
+  background: #c73e55;
+}
+
+button.active {
+  background: #e94560;
+  border-color: #e94560;
+}
+
+/* Main layout */
+.main-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #16213e;
+  border-right: 1px solid #333;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+.sidebar h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.sidebar hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 12px 0;
+}
+
+.template-list, .element-list {
+  list-style: none;
+}
+
+.template-list li, .element-list li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.template-list li:hover, .element-list li:hover {
+  background: #0f3460;
+}
+
+.template-list li.active, .element-list li.active {
+  background: #0f3460;
+  border-left: 3px solid #e94560;
+}
+
+.template-btn {
+  flex: 1;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.delete-btn:hover {
+  color: #e94560;
+  background: none;
+}
+
+.color-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.add-element-btn {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+/* Canvas area */
+.canvas-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #12122a;
+  overflow: auto;
+}
+
+.canvas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.canvas-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.canvas-size {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Properties panel */
+.properties {
+  width: 260px;
+  background: #16213e;
+  border-left: 1px solid #333;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+.properties h3 {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #e94560;
+}
+
+.properties h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.properties hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 12px 0;
+}
+
+.properties label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.properties input {
+  background: #0f3460;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  width: 100%;
+}
+
+.properties input[type="color"] {
+  height: 32px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.field-row {
+  display: flex;
+  gap: 8px;
+}
+
+.field-row label {
+  flex: 1;
+}
+
+.hint {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.region-info {
+  font-size: 11px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.no-selection {
+  padding: 8px 0;
+}
+
+.no-selection p {
+  font-size: 13px;
+  color: #666;
+}
+
+.no-selection h3 {
+  font-size: 14px;
+  color: #e94560;
+  margin-bottom: 8px;
+}
+
+.no-selection label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.no-selection input {
+  background: #0f3460;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.no-selection hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 12px 0;
+}
+
+/* Archetype panel slot list */
+.slot-list {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.slot-list li {
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.slot-list li:hover {
+  background: #0f3460;
+}
+
+.slot-list li.active {
+  background: #0f3460;
+  color: #fff;
+  border-left: 3px solid #e94560;
+}
+
+/* Content panel inline inputs */
+.inline-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333;
+  color: #e0e0e0;
+  padding: 2px 4px;
+  font-size: 12px;
+  min-width: 0;
+}
+
+.inline-input:focus {
+  border-bottom-color: #e94560;
+  outline: none;
+}
+
+.inline-color {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Empty canvas placeholder */
+.empty-canvas {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.archetype-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e94560;
+}

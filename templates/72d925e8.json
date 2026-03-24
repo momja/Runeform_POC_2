@@ -1,0 +1,120 @@
+{
+  "id": "72d925e8",
+  "name": "T1",
+  "canvas_width": 1080,
+  "canvas_height": 1080,
+  "archetypes": [
+    {
+      "name": "archetype_mn21a7qv",
+      "label": "A3",
+      "slots": {
+        "title": {
+          "x": 63,
+          "y": 292,
+          "width": 960,
+          "height": 220
+        },
+        "hero": {
+          "x": 60,
+          "y": 44,
+          "width": 960,
+          "height": 220
+        },
+        "details": {
+          "x": 60,
+          "y": 540,
+          "width": 960,
+          "height": 220
+        },
+        "logo": {
+          "x": 60,
+          "y": 780,
+          "width": 960,
+          "height": 220
+        }
+      }
+    },
+    {
+      "name": "archetype_mn21ag70",
+      "label": "A2",
+      "slots": {
+        "title": {
+          "x": 60,
+          "y": 60,
+          "width": 960,
+          "height": 220
+        },
+        "hero": {
+          "x": 60,
+          "y": 300,
+          "width": 960,
+          "height": 220
+        },
+        "details": {
+          "x": 60,
+          "y": 540,
+          "width": 960,
+          "height": 220
+        },
+        "logo": {
+          "x": 60,
+          "y": 780,
+          "width": 960,
+          "height": 220
+        }
+      }
+    },
+    {
+      "name": "archetype_mn21agwx",
+      "label": "A1",
+      "slots": {
+        "title": {
+          "x": 60,
+          "y": 60,
+          "width": 960,
+          "height": 220
+        },
+        "hero": {
+          "x": 59,
+          "y": 311,
+          "width": 960,
+          "height": 480
+        },
+        "details": {
+          "x": 58,
+          "y": 822,
+          "width": 700,
+          "height": 200
+        },
+        "logo": {
+          "x": 818,
+          "y": 820,
+          "width": 200,
+          "height": 200
+        }
+      }
+    }
+  ],
+  "content": [
+    {
+      "role": "title",
+      "label": "EVENT TITLE",
+      "color": "#d24646"
+    },
+    {
+      "role": "hero",
+      "label": "HERO IMAGE",
+      "color": "#50a05a"
+    },
+    {
+      "role": "details",
+      "label": "DATE / LOCATION",
+      "color": "#be7832"
+    },
+    {
+      "role": "logo",
+      "label": "LOGO",
+      "color": "#3c6ec8"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+---
+title: Runeform Architecture Overview
+---
+flowchart TB
+    subgraph Input["Input Layer"]
+        ED["Event Data"]
+        TM["Template Definition"]
+    end
+
+    subgraph ImageProc["Image Processing"]
+        RB["Background Removal (rembg)"]
+        VB["Visual Bounds"]
+        CH["Convex Hull"]
+        RB --> VB --> CH
+    end
+
+    subgraph Solver["Constraint Solver (Z3)"]
+        direction TB
+        RC["Region Containment"]
+        NO["Non-Overlap"]
+        AL["Alignment and Scaling"]
+        DS["Diverse Solution Search"]
+        RC & NO & AL --> DS
+    end
+
+    subgraph Render["Renderer"]
+        R1["Compose Layout"]
+        MF["Multi-Format Export"]
+        R1 --> MF
+    end
+
+    subgraph Ranker["LLM Ranker"]
+        direction TB
+        MI["Send Rendered PNGs"]
+        SC["Score and Rank"]
+        JO["Structured JSON Output"]
+        MI --> SC --> JO
+    end
+
+    ED --> Solver
+    TM --> Solver
+    ED --> ImageProc
+    ImageProc --> Solver
+
+    DS -->|"N valid layouts"| Render
+    MF -->|"N rendered images"| Ranker
+    JO -->|"best layouts"| OUT["Final Output"]
